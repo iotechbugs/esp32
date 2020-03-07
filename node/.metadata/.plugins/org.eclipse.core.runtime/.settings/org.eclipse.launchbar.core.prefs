@@ -1,0 +1,9 @@
+LaunchTargetManager/configs/blink=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/esp32-dimmer=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+configDescList=org.eclipse.cdt.debug.core.coreBuildDescriptorType\:blink,org.eclipse.cdt.debug.core.coreBuildDescriptorType\:esp32-dimmer
+eclipse.preferences.version=1
+org.eclipse.cdt.debug.core.coreBuildDescriptorType\:blink/activeLaunchMode=run
+org.eclipse.cdt.debug.core.coreBuildDescriptorType\:blink/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

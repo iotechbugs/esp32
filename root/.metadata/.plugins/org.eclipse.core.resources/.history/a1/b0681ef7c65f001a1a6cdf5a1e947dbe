@@ -1,0 +1,231 @@
+#include "mdf_common.h"
+#include "mwifi.h"
+#include "mlink.h"
+#include "nvs_flash.h"
+#include "nvs.h"
+#include "soc/soc.h"
+#include "soc/cpu.h"
+#include "soc/rtc_cntl_reg.h"
+#include "driver/rtc_cntl.h"
+
+#define BROWNOUT_DET_LVL 7
+#define CONFIG_BROWNOUT_DET_LVL_SEL_7 1
+
+#define BLINK_GPIO 2
+#define NO_OF_APPLIANCES 6
+static const char *VALUES = "values";
+static const char *SET = "set";
+static const char *ACTION = "action";
+static const char *TAG = "NODE#";
+// All output pins used
+const uint8_t output_pins[NO_OF_APPLIANCES] = { CONFIG_APPLIANCE_A,
+		CONFIG_APPLIANCE_B, CONFIG_APPLIANCE_C, };
+// Array to maintain statuses of appliances...
+uint8_t statuses[NO_OF_APPLIANCES] = { 0, 0, 0, 0, 0, 0, };
+
+void low_voltage_save() {
+	nvs_handle my_handle;
+	nvs_open("storage", NVS_READWRITE, &my_handle);
+	for (int8_t i = 0; i < NO_OF_APPLIANCES; i++) {
+		nvs_set_i32(my_handle, "v_" + i, statuses[i]);
+		nvs_commit(my_handle);
+	}
+	// Close
+	nvs_close(my_handle);
+	gpio_set_level(CONFIG_APPLIANCE_B, 1);
+}
+
+void brownout_init() {
+	REG_WRITE(RTC_CNTL_BROWN_OUT_REG,
+			RTC_CNTL_BROWN_OUT_ENA | RTC_CNTL_BROWN_OUT_PD_RF_ENA | (2 << RTC_CNTL_BROWN_OUT_RST_WAIT_S) | (BROWNOUT_DET_LVL << RTC_CNTL_DBROWN_OUT_THRES_S));
+
+	ESP_ERROR_CHECK(
+			rtc_isr_register(low_voltage_save, NULL, RTC_CNTL_BROWN_OUT_INT_ENA_M));
+	printf("Initialized BOD\n");
+
+	REG_SET_BIT(RTC_CNTL_INT_ENA_REG, RTC_CNTL_BROWN_OUT_INT_ENA_M);
+}
+
+static void _blink() {
+	gpio_set_level(BLINK_GPIO, 1);
+	vTaskDelay(100 / portTICK_PERIOD_MS);
+	gpio_set_level(BLINK_GPIO, 0);
+	vTaskDelay(100 / portTICK_PERIOD_MS);
+}
+
+static void perform_action(char *value_string) {
+	uint8_t pin_index = 1;
+	char pin = value_string[0];
+	// Skip first char to get exact value
+	value_string += 1;
+	int value = strtol(value_string, NULL, 0);
+	switch (pin) {
+	case 'A':
+		pin_index = 1;
+		break;
+	case 'B':
+		pin_index = 2;
+		break;
+	case 'C':
+		pin_index = 3;
+		break;
+	default:
+		break;
+	}
+	statuses[pin_index] = value ? true : false;
+	gpio_set_level(output_pins[pin_index], statuses[pin_index]);
+}
+
+static mdf_err_t process_msg(char *msg) {
+	cJSON *json_root = NULL;
+	json_root = cJSON_Parse(msg);
+	mdf_err_t status = MDF_OK;
+	if (json_root) {
+		cJSON *action = NULL;
+		action = cJSON_GetObjectItem(json_root, ACTION);
+		if (strcmp(action->valuestring, SET) == 0) {
+			// Action is set
+			cJSON *values = NULL;
+			values = cJSON_GetObjectItem(json_root, VALUES);
+			for (unsigned int i = 0; i < cJSON_GetArraySize(values); i++) {
+				perform_action(cJSON_GetArrayItem(values, i)->valuestring);
+			}
+		}
+		// Read current status and append statuses in response
+		mwifi_data_type_t data_type = { 0x0 };
+		status = mwifi_write(NULL, &data_type, msg, strlen(msg), true);
+		MDF_LOGI("reply MSG IS : %s", msg);
+	} else {
+		// Handle parse exception
+	}
+	return status;
+}
+
+static void node_read_task(void *arg) {
+	mdf_err_t ret = MDF_OK;
+	char *data = MDF_MALLOC(MWIFI_PAYLOAD_LEN); // @suppress("Symbol is not resolved")
+	size_t size = MWIFI_PAYLOAD_LEN;
+	mwifi_data_type_t data_type = { 0x0 };
+	uint8_t src_addr[MWIFI_ADDR_LEN] = { 0x0 };
+
+	MDF_LOGI("Note read task is running");
+
+	for (;;) {
+		if (!mwifi_is_connected()) {
+			vTaskDelay(500 / portTICK_RATE_MS);
+			continue;
+		}
+
+		size = MWIFI_PAYLOAD_LEN;
+		memset(data, 0, MWIFI_PAYLOAD_LEN);
+		ret = mwifi_read(src_addr, &data_type, data, &size, portMAX_DELAY);
+		MDF_ERROR_CONTINUE(ret != MDF_OK, "mwifi_read, ret: %x", ret);
+		_blink();
+		ret = process_msg(data);
+		MDF_LOGI("Node receive, addr: " MACSTR ", size: %d, data: %s", // @suppress("Symbol is not resolved")
+				MAC2STR(src_addr), size, data);
+	}
+
+	MDF_LOGW("Note read task is exit"); // @suppress("Symbol is not resolved")
+
+	MDF_FREE(data);
+	vTaskDelete(NULL);
+}
+
+static mdf_err_t wifi_init() {
+	mdf_err_t ret = nvs_flash_init();
+	wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT()
+	;
+
+	if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+		MDF_ERROR_ASSERT(nvs_flash_erase());
+		ret = nvs_flash_init();
+	}
+
+	MDF_ERROR_ASSERT(ret);
+
+	tcpip_adapter_init();
+	MDF_ERROR_ASSERT(esp_event_loop_init( NULL, NULL));
+	MDF_ERROR_ASSERT(esp_wifi_init(&cfg));
+	MDF_ERROR_ASSERT(esp_wifi_set_storage(WIFI_STORAGE_RAM));
+	MDF_ERROR_ASSERT(esp_wifi_set_mode(WIFI_MODE_STA));
+	MDF_ERROR_ASSERT(esp_wifi_set_ps(WIFI_PS_NONE));
+	MDF_ERROR_ASSERT(esp_mesh_set_6m_rate(true));
+	MDF_ERROR_ASSERT(esp_wifi_start());
+
+	return MDF_OK;
+}
+
+/**
+ * @brief All module events will be sent to this task in esp-mdf
+ *
+ * @Note:
+ *     1. Do not block or lengthy operations in the callback function.
+ *     2. Do not consume a lot of memory in the callback function.
+ *        The task memory of the callback function is only 4KB.
+ */
+static mdf_err_t event_loop_cb(mdf_event_loop_t event, void *ctx) {
+	MDF_LOGI("event_loop_cb, event: %d", event);
+
+	switch (event) {
+	case MDF_EVENT_MWIFI_STARTED:
+		MDF_LOGI("MESH is started");
+		break;
+
+	case MDF_EVENT_MWIFI_PARENT_CONNECTED:
+		MDF_LOGI("Parent is connected on station interface");
+		break;
+
+	case MDF_EVENT_MWIFI_PARENT_DISCONNECTED:
+		MDF_LOGI("Parent is disconnected on station interface");
+		break;
+
+	default:
+		break;
+	}
+
+	return MDF_OK;
+}
+static void enable_output_pins() {
+	// Implement read from NVS flash...
+	gpio_pad_select_gpio(BLINK_GPIO);
+	gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+
+	nvs_handle my_handle;
+	nvs_open("storage", NVS_READONLY, &my_handle);
+	for (int8_t i = 0; i < NO_OF_APPLIANCES; i++) {
+		nvs_get_i32(my_handle, "v_" + i, statuses[i]);
+		gpio_pad_select_gpio(output_pins[i]);
+		gpio_set_direction(output_pins[i], GPIO_MODE_OUTPUT);
+		gpio_set_level(output_pins[i], statuses[i]);
+	}
+	// Close
+	nvs_close(my_handle);
+}
+
+void app_main() {
+	brownout_init();
+	esp_err_t err = nvs_flash_init();
+	if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+		// NVS partition was truncated and needs to be erased
+		// Retry nvs_flash_init
+		ESP_ERROR_CHECK(nvs_flash_erase());
+		err = nvs_flash_init();
+	}
+	ESP_ERROR_CHECK(err);
+	esp_log_level_set("*", ESP_LOG_INFO);
+	enable_output_pins();
+	mwifi_init_config_t cfg = MWIFI_INIT_CONFIG_DEFAULT();
+	mwifi_config_t config = { .channel = CONFIG_MESH_CHANNEL, .mesh_id =
+			CONFIG_MESH_ID, .mesh_password = CONFIG_MESH_PASSWORD, .mesh_type =
+			MWIFI_MESH_NODE, };
+
+	MDF_ERROR_ASSERT(mdf_event_loop_init(event_loop_cb));
+	MDF_ERROR_ASSERT(wifi_init());
+	MDF_ERROR_ASSERT(mwifi_init(&cfg));
+	MDF_ERROR_ASSERT(mwifi_set_config(&config));
+	MDF_ERROR_ASSERT(mwifi_start());
+
+	xTaskCreate(node_read_task, "node_read_task", 4 * 1024, NULL,
+			CONFIG_MDF_TASK_DEFAULT_PRIOTY, NULL);
+}

@@ -1,0 +1,17 @@
+cmakeToolchains/0/__path=/Users/sankar/esp/esp-idf/tools/cmake/toolchain-esp32.cmake
+cmakeToolchains/0/arch=xtensa
+cmakeToolchains/0/cdt.toolChain.id=gcc-xtensa-/Users/sankar/.espressif/tools/xtensa-esp32-elf/1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+cmakeToolchains/0/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+cmakeToolchains/0/os=esp32
+cmakeToolchains/1/__path=/Users/sankar/esp/esp-idf/tools/cmake/toolchain-esp32.cmake
+cmakeToolchains/1/arch=xtensa
+cmakeToolchains/1/cdt.toolChain.id=gcc-xtensa-/Users/sankar/.espressif/tools/xtensa-esp32-elf/1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+cmakeToolchains/1/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+cmakeToolchains/1/os=esp32
+cmakeToolchains/2/__path=/Users/sankar/esp/esp-idf/tools/cmake/toolchain-esp32.cmake
+cmakeToolchains/2/arch=xtensa
+cmakeToolchains/2/cdt.toolChain.id=gcc-xtensa-/Users/sankar/.espressif/tools/xtensa-esp32-elf/1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+cmakeToolchains/2/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+cmakeToolchains/2/os=esp32
+cmakeToolchains/n=3
+eclipse.preferences.version=1

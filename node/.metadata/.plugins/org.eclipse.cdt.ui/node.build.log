@@ -1,0 +1,247 @@
+21:11:51 **** Incremental Build of configuration Default for project node ****
+make -j9 all 
+including /Users/sankar/esp/esp-mdf/esp-idf/components/app_update/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/bootloader/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/bootloader_support/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/coap/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/esp32/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/esptool_py/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/mbedtls/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/nghttp/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/partition_table/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/components/third_party/esp-aliyun/components/ssl/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/ulp/Makefile.projbuild...
+Toolchain path: /Users/sankar/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+Toolchain version: crosstool-ng-1.22.0-80-g6c4433a
+Compiler version: 5.2.0
+python /Users/sankar/esp/esp-mdf/esp-idf/tools/check_python_dependencies.py
+PROJECT_PATH= COMPONENT_DIRS= /Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/esp-mdf/esp-idf/components/bootloader/subproject V=1 BUILD_DIR_BASE=/Users/sankar/esp/local-esp32-code/node/build/bootloader TEST_COMPONENTS= TESTS_ALL= EXCLUDE_COMPONENTS= /Users/sankar/esp/local-esp32-code/node/build/bootloader/bootloader.bin
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/app_trace -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/app_trace/component.mk COMPONENT_NAME=app_trace build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/app_update -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/app_update/component.mk COMPONENT_NAME=app_update build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/asio -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/asio/component.mk COMPONENT_NAME=asio build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/aws_iot -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/aws_iot/component.mk COMPONENT_NAME=aws_iot build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader_support -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/bootloader_support/component.mk COMPONENT_NAME=bootloader_support build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bt -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/bt/component.mk COMPONENT_NAME=bt build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/coap -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/coap/component.mk COMPONENT_NAME=coap build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/console -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/console/component.mk COMPONENT_NAME=console build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/cxx -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/cxx/component.mk COMPONENT_NAME=cxx build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/driver -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/driver/component.mk COMPONENT_NAME=driver build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp-aliyun -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/third_party/esp-aliyun/component.mk COMPONENT_NAME=esp-aliyun build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp-tls -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/third_party/esp-aliyun/components/esp-tls/component.mk COMPONENT_NAME=esp-tls build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp32 -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp32/component.mk COMPONENT_NAME=esp32 build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp_adc_cal -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp_adc_cal/component.mk COMPONENT_NAME=esp_adc_cal build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp_event -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp_event/component.mk COMPONENT_NAME=esp_event build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp_http_client -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp_http_client/component.mk COMPONENT_NAME=esp_http_client build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp_http_server -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp_http_server/component.mk COMPONENT_NAME=esp_http_server build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp_https_ota -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp_https_ota/component.mk COMPONENT_NAME=esp_https_ota build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/esp_ringbuf -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/esp_ringbuf/component.mk COMPONENT_NAME=esp_ringbuf build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/ethernet -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/ethernet/component.mk COMPONENT_NAME=ethernet build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/expat -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/expat/component.mk COMPONENT_NAME=expat build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/fatfs -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/fatfs/component.mk COMPONENT_NAME=fatfs build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/freemodbus -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/freemodbus/component.mk COMPONENT_NAME=freemodbus build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/freertos -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/freertos/component.mk COMPONENT_NAME=freertos build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/heap -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/heap/component.mk COMPONENT_NAME=heap build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/idf_test -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/idf_test/component.mk COMPONENT_NAME=idf_test build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/jsmn -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/jsmn/component.mk COMPONENT_NAME=jsmn build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/json -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/json/component.mk COMPONENT_NAME=json build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/libsodium -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/libsodium/component.mk COMPONENT_NAME=libsodium build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/log -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/log/component.mk COMPONENT_NAME=log build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/lwip -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/lwip/component.mk COMPONENT_NAME=lwip build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/main -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/local-esp32-code/node/main/component.mk COMPONENT_NAME=main build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/maliyun_linkkit -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/maliyun_linkkit/component.mk COMPONENT_NAME=maliyun_linkkit build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mbedtls -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/mbedtls/component.mk COMPONENT_NAME=mbedtls build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mcommon -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mcommon/component.mk COMPONENT_NAME=mcommon build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mconfig -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mconfig/component.mk COMPONENT_NAME=mconfig build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mdebug -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mdebug/component.mk COMPONENT_NAME=mdebug build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mdns -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/mdns/component.mk COMPONENT_NAME=mdns build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mespnow -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mespnow/component.mk COMPONENT_NAME=mespnow build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/micro-ecc -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/micro-ecc/component.mk COMPONENT_NAME=micro-ecc build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/miniz -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/third_party/miniz/component.mk COMPONENT_NAME=miniz build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mlink -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mlink/component.mk COMPONENT_NAME=mlink build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mqtt -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/mqtt/component.mk COMPONENT_NAME=mqtt build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mupgrade -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mupgrade/component.mk COMPONENT_NAME=mupgrade build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/mwifi -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/mwifi/component.mk COMPONENT_NAME=mwifi build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/newlib -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/newlib/component.mk COMPONENT_NAME=newlib build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/nghttp -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/nghttp/component.mk COMPONENT_NAME=nghttp build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/nvs_flash -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/nvs_flash/component.mk COMPONENT_NAME=nvs_flash build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/openssl -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/openssl/component.mk COMPONENT_NAME=openssl build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/protobuf-c -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/protobuf-c/component.mk COMPONENT_NAME=protobuf-c build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/protocomm -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/protocomm/component.mk COMPONENT_NAME=protocomm build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/pthread -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/pthread/component.mk COMPONENT_NAME=pthread build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/sdmmc -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/sdmmc/component.mk COMPONENT_NAME=sdmmc build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/smartconfig_ack -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/smartconfig_ack/component.mk COMPONENT_NAME=smartconfig_ack build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/soc -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/soc/component.mk COMPONENT_NAME=soc build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/spi_flash -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/spi_flash/component.mk COMPONENT_NAME=spi_flash build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/spiffs -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/spiffs/component.mk COMPONENT_NAME=spiffs build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/ssl -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/components/third_party/esp-aliyun/components/ssl/component.mk COMPONENT_NAME=ssl build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/tcp_transport -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/tcp_transport/component.mk COMPONENT_NAME=tcp_transport build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/tcpip_adapter -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/tcpip_adapter/component.mk COMPONENT_NAME=tcpip_adapter build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/ulp -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/ulp/component.mk COMPONENT_NAME=ulp build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/vfs -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/vfs/component.mk COMPONENT_NAME=vfs build
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/wear_levelling -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/wear_levelling/component.mk COMPONENT_NAME=wear_levelling build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/wifi_provisioning -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/wifi_provisioning/component.mk COMPONENT_NAME=wifi_provisioning build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/wpa_supplicant -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/wpa_supplicant/component.mk COMPONENT_NAME=wpa_supplicant build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/xtensa-debug-module -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/xtensa-debug-module/component.mk COMPONENT_NAME=xtensa-debug-module build
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+make[1]: Nothing to be done for `build'.
+Target 'component-app_trace-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/app_trace/libapp_trace.a'
+Target 'component-app_update-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/app_update/libapp_update.a'
+Target 'component-asio-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/asio/libasio.a'
+Target 'component-aws_iot-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/aws_iot/libaws_iot.a'
+Target 'component-bootloader_support-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader_support/libbootloader_support.a'
+Target 'component-bt-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bt/libbt.a'
+Target 'component-coap-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/coap/libcoap.a'
+Target 'component-console-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/console/libconsole.a'
+Target 'component-cxx-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/cxx/libcxx.a'
+Target 'component-driver-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/driver/libdriver.a'
+Target 'component-esp-aliyun-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp-aliyun/libesp-aliyun.a'
+Target 'component-esp-tls-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp-tls/libesp-tls.a'
+make[1]: Nothing to be done for `build'.
+Target 'component-esp32-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp32/libesp32.a'
+Target 'component-esp_adc_cal-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp_adc_cal/libesp_adc_cal.a'
+Target 'component-esp_event-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp_event/libesp_event.a'
+Target 'component-esp_http_client-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp_http_client/libesp_http_client.a'
+Target 'component-esp_http_server-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp_http_server/libesp_http_server.a'
+Target 'component-esp_https_ota-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp_https_ota/libesp_https_ota.a'
+including /Users/sankar/esp/esp-mdf/esp-idf/components/esptool_py/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/bootloader_support/Makefile.projbuild...
+including /Users/sankar/esp/esp-mdf/esp-idf/components/bootloader/subproject/main/Makefile.projbuild...
+Target 'component-esp_ringbuf-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/esp_ringbuf/libesp_ringbuf.a'
+Target 'component-ethernet-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/ethernet/libethernet.a'
+Target 'component-expat-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/expat/libexpat.a'
+Target 'component-fatfs-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/fatfs/libfatfs.a'
+Target 'component-freemodbus-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/freemodbus/libfreemodbus.a'
+Target 'component-freertos-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/freertos/libfreertos.a'
+Target 'component-heap-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/heap/libheap.a'
+Target 'component-idf_test-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/idf_test/libidf_test.a'
+Target 'component-jsmn-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/jsmn/libjsmn.a'
+Target 'component-json-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/json/libjson.a'
+Target 'component-libsodium-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/libsodium/liblibsodium.a'
+Target 'component-log-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/log/liblog.a'
+Target 'component-lwip-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/lwip/liblwip.a'
+Target 'component-main-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/main/libmain.a'
+Target 'component-maliyun_linkkit-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/maliyun_linkkit/libmaliyun_linkkit.a'
+Target 'component-mbedtls-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mbedtls/libmbedtls.a'
+Target 'component-mcommon-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mcommon/libmcommon.a'
+Target 'component-mconfig-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mconfig/libmconfig.a'
+Target 'component-mdebug-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mdebug/libmdebug.a'
+Target 'component-mdns-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mdns/libmdns.a'
+Target 'component-mespnow-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mespnow/libmespnow.a'
+Target 'component-micro-ecc-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/micro-ecc/libmicro-ecc.a'
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader/bootloader_support -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/bootloader_support/component.mk COMPONENT_NAME=bootloader_support build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader/log -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/log/component.mk COMPONENT_NAME=log build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader/spi_flash -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/spi_flash/component.mk COMPONENT_NAME=spi_flash build
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader/micro-ecc -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/micro-ecc/component.mk COMPONENT_NAME=micro-ecc build
+make[2]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader/soc -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/soc/component.mk COMPONENT_NAME=soc build
+make[2]: Nothing to be done for `build'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C /Users/sankar/esp/local-esp32-code/node/build/bootloader/main -f /Users/sankar/esp/esp-mdf/esp-idf/make/component_wrapper.mk COMPONENT_MAKEFILE=/Users/sankar/esp/esp-mdf/esp-idf/components/bootloader/subproject/main/component.mk COMPONENT_NAME=main build
+make[2]: Nothing to be done for `build'.
+make[2]: Nothing to be done for `build'.
+make[2]: Nothing to be done for `build'.
+Target 'component-bootloader_support-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader/bootloader_support/libbootloader_support.a'
+make[2]: Nothing to be done for `build'.
+Target 'component-miniz-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/miniz/libminiz.a'
+Target 'component-mlink-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mlink/libmlink.a'
+Target 'component-mqtt-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mqtt/libmqtt.a'
+Target 'component-mupgrade-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mupgrade/libmupgrade.a'
+Target 'component-mwifi-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/mwifi/libmwifi.a'
+Target 'component-newlib-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/newlib/libnewlib.a'
+Target 'component-nghttp-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/nghttp/libnghttp.a'
+Target 'component-nvs_flash-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/nvs_flash/libnvs_flash.a'
+Target 'component-openssl-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/openssl/libopenssl.a'
+Target 'component-protobuf-c-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/protobuf-c/libprotobuf-c.a'
+Target 'component-protocomm-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/protocomm/libprotocomm.a'
+Target 'component-pthread-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/pthread/libpthread.a'
+Target 'component-sdmmc-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/sdmmc/libsdmmc.a'
+Target 'component-smartconfig_ack-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/smartconfig_ack/libsmartconfig_ack.a'
+Target 'component-soc-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/soc/libsoc.a'
+Target 'component-spi_flash-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/spi_flash/libspi_flash.a'
+Target 'component-spiffs-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/spiffs/libspiffs.a'
+Target 'component-ssl-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/ssl/libssl.a'
+Target 'component-tcp_transport-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/tcp_transport/libtcp_transport.a'
+Target 'component-tcpip_adapter-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/tcpip_adapter/libtcpip_adapter.a'
+Target 'component-ulp-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/ulp/libulp.a'
+Target 'component-vfs-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/vfs/libvfs.a'
+Target 'component-wear_levelling-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/wear_levelling/libwear_levelling.a'
+Target 'component-wifi_provisioning-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/wifi_provisioning/libwifi_provisioning.a'
+Target 'component-wpa_supplicant-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/wpa_supplicant/libwpa_supplicant.a'
+Target 'component-xtensa-debug-module-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/xtensa-debug-module/libxtensa-debug-module.a'
+xtensa-esp32-elf-gcc -nostdlib -u call_user_start_cpu0  -Wl,--gc-sections -Wl,-static -Wl,--start-group  -L/Users/sankar/esp/local-esp32-code/node/build/app_trace -lapp_trace -L/Users/sankar/esp/local-esp32-code/node/build/app_update -lapp_update -L/Users/sankar/esp/local-esp32-code/node/build/asio -lasio -L/Users/sankar/esp/local-esp32-code/node/build/aws_iot  -L/Users/sankar/esp/local-esp32-code/node/build/bootloader_support -lbootloader_support -L/Users/sankar/esp/local-esp32-code/node/build/bt -lbt -L/Users/sankar/esp/local-esp32-code/node/build/coap -lcoap -L/Users/sankar/esp/local-esp32-code/node/build/console -lconsole -L/Users/sankar/esp/local-esp32-code/node/build/cxx -lcxx -u __cxa_guard_dummy -u __cxx_fatal_exception -L/Users/sankar/esp/local-esp32-code/node/build/driver -ldriver -L/Users/sankar/esp/local-esp32-code/node/build/esp-aliyun  -L/Users/sankar/esp/local-esp32-code/node/build/esp-tls -lesp-tls -L/Users/sankar/esp/local-esp32-code/node/build/esp32 -lesp32 -L /Users/sankar/esp/esp-mdf/esp-idf/components/esp32/ld/wifi_iram_opt /Users/sankar/esp/esp-mdf/esp-idf/components/esp32/libhal.a -L/Users/sankar/esp/esp-mdf/esp-idf/components/esp32/lib -lcore -lrtc -lnet80211 -lpp -lwpa -lsmartconfig -lcoexist -lwps -lwpa2 -lespnow -lphy -lmesh -L /Users/sankar/esp/esp-mdf/esp-idf/components/esp32/ld -T esp32_out.ld -u ld_include_panic_highint_hdl -T esp32.common.ld -T esp32.rom.ld -T esp32.peripherals.ld -T esp32.rom.libgcc.ld -T esp32.rom.spiram_incompatible_fns.ld -L/Users/sankar/esp/local-esp32-code/node/build/esp_adc_cal -lesp_adc_cal -L/Users/sankar/esp/local-esp32-code/node/build/esp_event -lesp_event -L/Users/sankar/esp/local-esp32-code/node/build/esp_http_client -lesp_http_client -L/Users/sankar/esp/local-esp32-code/node/build/esp_http_server -lesp_http_server -L/Users/sankar/esp/local-esp32-code/node/build/esp_https_ota -lesp_https_ota -L/Users/sankar/esp/local-esp32-code/node/build/esp_ringbuf -lesp_ringbuf -L/Users/sankar/esp/local-esp32-code/node/build/ethernet -lethernet -L/Users/sankar/esp/local-esp32-code/node/build/expat -lexpat -L/Users/sankar/esp/local-esp32-code/node/build/fatfs -lfatfs -L/Users/sankar/esp/local-esp32-code/node/build/freemodbus -lfreemodbus -L/Users/sankar/esp/local-esp32-code/node/build/freertos -lfreertos -Wl,--undefined=uxTopUsedPriority -L/Users/sankar/esp/local-esp32-code/node/build/heap -lheap -L/Users/sankar/esp/local-esp32-code/node/build/idf_test -lidf_test -L/Users/sankar/esp/local-esp32-code/node/build/jsmn -ljsmn -L/Users/sankar/esp/local-esp32-code/node/build/json -ljson -L/Users/sankar/esp/local-esp32-code/node/build/libsodium -llibsodium -L/Users/sankar/esp/local-esp32-code/node/build/log -llog -L/Users/sankar/esp/local-esp32-code/node/build/lwip -llwip -L/Users/sankar/esp/local-esp32-code/node/build/main -lmain -L/Users/sankar/esp/local-esp32-code/node/build/maliyun_linkkit  -L/Users/sankar/esp/local-esp32-code/node/build/mbedtls -lmbedtls -L/Users/sankar/esp/local-esp32-code/node/build/mcommon -lmcommon -L/Users/sankar/esp/local-esp32-code/node/build/mconfig -lmconfig -L/Users/sankar/esp/local-esp32-code/node/build/mdebug -lmdebug -L/Users/sankar/esp/local-esp32-code/node/build/mdns -lmdns -L/Users/sankar/esp/local-esp32-code/node/build/mespnow -lmespnow -L/Users/sankar/esp/local-esp32-code/node/build/micro-ecc -lmicro-ecc -L/Users/sankar/esp/local-esp32-code/node/build/miniz -lminiz -L/Users/sankar/esp/local-esp32-code/node/build/mlink -lmlink -L/Users/sankar/esp/local-esp32-code/node/build/mqtt -lmqtt -L/Users/sankar/esp/local-esp32-code/node/build/mupgrade -lmupgrade -L/Users/sankar/esp/local-esp32-code/node/build/mwifi -lmwifi -L/Users/sankar/esp/local-esp32-code/node/build/newlib /Users/sankar/esp/esp-mdf/esp-idf/components/newlib/lib/libc.a /Users/sankar/esp/esp-mdf/esp-idf/components/newlib/lib/libm.a -lnewlib -L/Users/sankar/esp/local-esp32-code/node/build/nghttp -lnghttp -L/Users/sankar/esp/local-esp32-code/node/build/nvs_flash -lnvs_flash -L/Users/sankar/esp/local-esp32-code/node/build/openssl -lopenssl -L/Users/sankar/esp/local-esp32-code/node/build/protobuf-c -lprotobuf-c -L/Users/sankar/esp/local-esp32-code/node/build/protocomm -lprotocomm -L/Users/sankar/esp/local-esp32-code/node/build/pthread -lpthread -L/Users/sankar/esp/local-esp32-code/node/build/sdmmc -lsdmmc -L/Users/sankar/esp/local-esp32-code/node/build/smartconfig_ack -lsmartconfig_ack -L/Users/sankar/esp/local-esp32-code/node/build/soc -lsoc -L/Users/sankar/esp/local-esp32-code/node/build/spi_flash -lspi_flash -L/Users/sankar/esp/local-esp32-code/node/build/spiffs -lspiffs -L/Users/sankar/esp/local-esp32-code/node/build/ssl -lssl -L/Users/sankar/esp/local-esp32-code/node/build/tcp_transport -ltcp_transport -L/Users/sankar/esp/local-esp32-code/node/build/tcpip_adapter -ltcpip_adapter -L/Users/sankar/esp/local-esp32-code/node/build/ulp -lulp -L/Users/sankar/esp/local-esp32-code/node/build/vfs -lvfs -L/Users/sankar/esp/local-esp32-code/node/build/wear_levelling -lwear_levelling -L/Users/sankar/esp/local-esp32-code/node/build/wifi_provisioning -lwifi_provisioning -L/Users/sankar/esp/local-esp32-code/node/build/wpa_supplicant -lwpa_supplicant -L/Users/sankar/esp/local-esp32-code/node/build/xtensa-debug-module -lxtensa-debug-module -lgcc -lstdc++ -lgcov -Wl,--end-group -Wl,-EL -o /Users/sankar/esp/local-esp32-code/node/build/.elf -Wl,-Map=/Users/sankar/esp/local-esp32-code/node/build/.map
+Python requirements from /Users/sankar/esp/esp-mdf/esp-idf/requirements.txt are satisfied.
+Target 'component-log-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader/log/liblog.a'
+Target 'component-spi_flash-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader/spi_flash/libspi_flash.a'
+Target 'component-micro-ecc-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader/micro-ecc/libmicro-ecc.a'
+Target 'component-soc-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader/soc/libsoc.a'
+Target 'component-main-build' responsible for '/Users/sankar/esp/local-esp32-code/node/build/bootloader/main/libmain.a'
+python /Users/sankar/esp/esp-mdf/esp-idf/components/app_update/gen_empty_partition.py --size 0x2000 /Users/sankar/esp/local-esp32-code/node/build/ota_data_initial.bin
+python /Users/sankar/esp/esp-mdf/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode "dio" --flash_freq "40m" --flash_size "4MB"  -o /Users/sankar/esp/local-esp32-code/node/build/.bin /Users/sankar/esp/local-esp32-code/node/build/.elf
+esptool.py v2.6
+To flash all build output, run 'make flash' or:
+python /Users/sankar/esp/esp-mdf/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART36 --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0xd000 /Users/sankar/esp/local-esp32-code/node/build/ota_data_initial.bin 0x1000 /Users/sankar/esp/local-esp32-code/node/build/bootloader/bootloader.bin 0x10000 /Users/sankar/esp/local-esp32-code/node/build/.bin 0x8000 /Users/sankar/esp/local-esp32-code/node/build/partitions.bin
+
+21:11:54 Build Finished. 0 errors, 0 warnings. (took 3s.807ms)
+
