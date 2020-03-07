@@ -1,10 +1,8 @@
-[[中文]](./README_cn.md)
-
-# get_started Example
+# Root Example
 
 ## Introduction
 
-It introduces a quick way to build an ESP-WIFI-MESH network without a router. For another detailed network configuration method, please refer to [examples/function_demo/mwifi](../function_demo/mwifi/README.md). Before running the example, please read the documents [README](../../README_en.md) and [ESP-WIFI-MESH](https://docs.espressif.com/projects/esp-idf/en/stable/api-guides/mesh.html).
+It introduces a quick way to build an ESP-WIFI-MESH network without a router as a ROOT node.
 
 ## Configure
 
