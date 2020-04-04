@@ -185,7 +185,9 @@ void app_main()
     MDF_ERROR_ASSERT(mwifi_set_config(&config));
     MDF_ERROR_ASSERT(mwifi_start());
 
+    MDF_LOGI("CONFIG_IO_TECH_PROPERTY : %d",CONFIG_IO_TECH_PROPERTY);
 
+ 
     xTaskCreate(node_write_task, "node_write_task", 4 * 1024,
                     NULL, CONFIG_MDF_TASK_DEFAULT_PRIOTY, NULL);
     xTaskCreate(node_read_task, "node_read_task", 4 * 1024,

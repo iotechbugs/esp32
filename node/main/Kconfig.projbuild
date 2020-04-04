@@ -31,4 +31,10 @@ config MESH_CHANNEL
     help
         Mesh network channel.
 
+config IO_TECH_PROPERTY
+    int "TEST PROPERTY for Video"
+    range 1 100
+    default 50
+    help
+        Mesh network channel.
 endmenu
