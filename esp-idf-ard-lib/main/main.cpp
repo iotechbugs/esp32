@@ -21,10 +21,12 @@ void change() {
 }
 
 void blink() {
+  Serial.println("Blinking...." );
   digitalWrite(LED_PIN, !digitalRead(LED_PIN));
 }
 
 void toggle() {
+  Serial.println("toggle triggered...." );
   static bool isBlinking = false;
   if (isBlinking) {
     blinker.detach();
@@ -39,7 +41,8 @@ void toggle() {
 
 void app_main()
 {   
+  Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
   toggler.attach(togglePeriod, toggle);
-  changer.once(30, change);
+  changer.once(5, change);
 }
