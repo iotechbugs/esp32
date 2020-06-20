@@ -1,4 +1,4 @@
-set(COMPONENT_SRCS "simple_ota_example.c")
+set(COMPONENT_SRCS "main.c")
 set(COMPONENT_ADD_INCLUDEDIRS ".")
 
 
