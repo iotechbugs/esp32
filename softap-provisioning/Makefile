@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := softap_prov
+PROJECT_NAME := wifi_prov_mgr
 
 include $(IDF_PATH)/make/project.mk
 
