@@ -164,11 +164,9 @@ void app_main()
     gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
 
     mwifi_init_config_t cfg = MWIFI_INIT_CONFIG_DEFAULT();
-    mwifi_config_t config   = {
-        .channel   = CONFIG_MESH_CHANNEL,
-        .mesh_id   = CONFIG_MESH_ID,
-        .mesh_type = CONFIG_DEVICE_TYPE,
-    };
+        mwifi_config_t config = { .channel = 13, .mesh_id =
+            "MESH_ID", .mesh_password = "MESH_PASS", .mesh_type =
+            MWIFI_MESH_NODE, };
 
     /**
      * @brief Set the log level for serial port printing.
