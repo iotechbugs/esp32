@@ -21,7 +21,7 @@ void consumer_task(void *pvParameter) {
 	while (1) {
 		xQueueReceive(q, &received_holder,
 				(TickType_t )(1000/portTICK_PERIOD_MS));
-		printf("<<RCVD :: \t COUNTER {%d}, VALUE {%s} ,STATUS {%s} \n",
+		printf("<<RCVD :: \t COUNTER {%d}, VALUE {%s}, STATUS {%s} \n",
 				received_holder.counter, received_holder.value,
 				received_holder.status ? "TRUE" : "FALSE");
 		vTaskDelay(500 / portTICK_PERIOD_MS); //wait for 500 ms
@@ -38,7 +38,7 @@ void producer_task(void *pvParameter) {
 	}
 	while (1) {
 		printf("=================\n");
-		printf(">>SENT ::  \t COUNTER {%d}, VALUE {%s} ,STATUS {%s} \n",
+		printf(">>SENT ::  \t COUNTER {%d}, VALUE {%s}, STATUS {%s} \n",
 				data_holder.counter, data_holder.value,
 				data_holder.status ? "TRUE" : "FALSE");
 		xQueueSend(q, (void* )&data_holder, (TickType_t )0); // add the counter value to the queue
